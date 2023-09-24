@@ -115,11 +115,32 @@
           emmet-vim
           fugitive
           gruvbox-material
+
+          # Auto-completion
+          nvim-cmp
+          cmp-buffer
+          cmp-path
+          cmp-nvim-lsp
+          cmp-nvim-lua
+
           {
             plugin = pkgs.vimPlugins.gitsigns-nvim;
             type = "lua";
             config = ''
               require('gitsigns').setup();
+            '';
+          }
+          {
+            plugin = pkgs.vimPlugins.lsp-zero-nvim;
+            type = "lua";
+            config = ''
+              local lsp = require('lsp-zero').preset({
+                name = 'minimal',
+                set_lsp_keymaps = true,
+                manage_nvim_cmp = true,
+                suggest_lsp_servers = false,
+              })
+              lsp.setup()
             '';
           }
           {
