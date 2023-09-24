@@ -126,6 +126,7 @@
             plugin = pkgs.vimPlugins.nvim-lspconfig;
             type = "lua";
             config = ''
+              require'lspconfig'.nixd.setup{}
               require'lspconfig'.pyright.setup{}
               require'lspconfig'.tsserver.setup{}
               vim.keymap.set('n', 'gl', vim.diagnostic.open_float)
@@ -155,6 +156,7 @@
           }
         ];
         extraPackages = with pkgs; [
+          nixd
           nodePackages.typescript-language-server
           pyright
         ];
