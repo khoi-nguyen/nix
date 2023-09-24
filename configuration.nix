@@ -97,8 +97,10 @@
       neovim = {
         enable = true;
         extraConfig = ''
+          colorscheme gruvbox-material
           let maplocalleader=","
 
+          noremap <localleader>g <CMD>Git<CR>
           noremap <silent> <C-S> :update<CR>:w<CR>
           inoremap <silent> <C-S> <C-O>:update<CR><C-O>:w<CR>
 
@@ -110,13 +112,14 @@
         '';
         plugins = with pkgs.vimPlugins; [
           emmet-vim
+          fugitive
+          gruvbox-material
           {
-            plugin = pkgs.vimPlugins.fugitive;
-            config = "nnoremap <localleader>g <cmd>Git<cr>";
-          }
-          {
-            plugin = pkgs.vimPlugins.gruvbox-material;
-            config = "colorscheme gruvbox-material";
+            plugin = pkgs.vimPlugins.gitsigns-nvim;
+            type = "lua";
+            config = ''
+              require('gitsigns').setup();
+            '';
           }
           {
             plugin = pkgs.vimPlugins.nvim-lspconfig;
@@ -135,7 +138,7 @@
             config = ''
               require("nvim-tree").setup()
               local api = require "nvim-tree.api"
-              vim.keymap.set('n', '<localleader>t', api.tree.toggle())
+              vim.keymap.set('n', '<localleader>t', api.tree.toggle, {})
             '';
           }
           {
