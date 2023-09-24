@@ -166,6 +166,13 @@
         extraConfig = ''
           unbind C-b
           bind \` send-prefix
+          bind h select-pane -L
+          bind j select-pane -D
+          bind k select-pane -U
+          bind l select-pane -R
+          bind s split-window
+          bind v split-window -h
+          bind x kill-pane
 
           set -g base-index 1
           set -g mouse on
