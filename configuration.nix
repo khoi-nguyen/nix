@@ -216,10 +216,12 @@
     mosh
     pandoc
     python3
+    poppler_utils
     ripgrep
     spotify
     teams
     tmux
+    vifm
     vscode
   ];
 
