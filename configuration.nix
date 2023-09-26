@@ -44,7 +44,7 @@ in
   ];
 
   # Keyboard layout
-  console.keyMap = "uk";
+  console.keyMap = "dvorak";
   services.xserver = {
     layout = "us";
     xkbVariant = "dvorak-alt-intl";
@@ -76,14 +76,6 @@ in
     home.username = "khoi";
     home.homeDirectory = "/home/khoi";
     home.stateVersion = "23.05";
-
-    services.xcape = {
-      enable = true;
-      mapExpression = {
-        Shift_L = "Escape";
-        Control_L = "Escape";
-      };
-    };
 
     programs = {
       fish = {
