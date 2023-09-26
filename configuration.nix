@@ -95,9 +95,7 @@ in
         userName = "Khoi Nguyen";
         userEmail = "khoi@nguyen.me.uk";
       };
-      home-manager = {
-        enable = true;
-      };
+      home-manager.enable = true;
       neovim = {
         enable = true;
         extraConfig = ''
@@ -223,14 +221,8 @@ in
     vscode
   ];
 
-  programs = {
-    fish = {
-      enable = true;
-    };
-    neovim = {
-      enable = true;
-    };
-  };
+  programs.fish.enable = true;
+  programs.neovim.enable = true;
 
   system.stateVersion = "23.05";
 }
