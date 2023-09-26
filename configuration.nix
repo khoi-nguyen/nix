@@ -2,7 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
+
+let
+  fromGithub = ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
+    pname = "${lib.strings.sanitizeDerivationName repo}";
+    version = ref;
+    src = builtins.fetchGit {
+      url = "https://github.com/${repo}.git";
+      ref = ref;
+    };
+  };
+in
 
 {
   imports =
@@ -115,6 +126,7 @@
           emmet-vim
           fugitive
           gruvbox-material
+          nvim-treesitter.withAllGrammars
 
           # Auto-completion
           nvim-cmp
@@ -131,16 +143,13 @@
             '';
           }
           {
-            plugin = pkgs.vimPlugins.lsp-zero-nvim;
+            plugin = (fromGithub "HEAD" "VonHeikemen/lsp-zero.nvim");
             type = "lua";
             config = ''
-              local lsp = require('lsp-zero').preset({
-                name = 'minimal',
-                set_lsp_keymaps = true,
-                manage_nvim_cmp = true,
-                suggest_lsp_servers = false,
-              })
-              lsp.setup()
+              local lsp_zero = require('lsp-zero')
+              lsp_zero.on_attach(function(client, bufnr)
+                lsp_zero.default_keymaps({buffer = bufnr})
+              end)
             '';
           }
           {
@@ -150,9 +159,6 @@
               require'lspconfig'.nixd.setup{}
               require'lspconfig'.pyright.setup{}
               require'lspconfig'.tsserver.setup{}
-              vim.keymap.set('n', 'gl', vim.diagnostic.open_float)
-              vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
-              vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
             '';
           }
           {
