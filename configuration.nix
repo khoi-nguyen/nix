@@ -209,6 +209,7 @@ in
           pyright
         ];
       };
+      qutebrowser.enable = true;
       tmux = {
         enable = true;
         extraConfig = ''
@@ -245,6 +246,7 @@ in
     pandoc
     python3
     poppler_utils
+    qutebrowser
     ripgrep
     spotify
     teams
