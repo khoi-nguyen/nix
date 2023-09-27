@@ -134,6 +134,7 @@ in
           fugitive
           gruvbox-material
           nvim-treesitter.withAllGrammars
+          nvim-web-devicons
 
           # Snippets
           friendly-snippets
@@ -240,6 +241,7 @@ in
     home-manager
     nodejs_20
     mosh
+    nerdfonts
     pandoc
     python3
     poppler_utils
