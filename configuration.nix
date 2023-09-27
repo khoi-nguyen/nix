@@ -147,11 +147,18 @@ in
           cmp-nvim-lua
 
           {
+            plugin = pkgs.vimPlugins.nvim-surround;
+            type = "lua";
+            config = "require('nvim-surround').setup({})";
+          }
+          {
+            plugin = pkgs.vimPlugins.neoformat;
+            config = "autocmd BufWritePre *.ts,*.tsx,*.json,*.scss Neoformat";
+          }
+          {
             plugin = pkgs.vimPlugins.gitsigns-nvim;
             type = "lua";
-            config = ''
-              require('gitsigns').setup();
-            '';
+            config = "require('gitsigns').setup()";
           }
           {
             plugin = (fromGithub "HEAD" "VonHeikemen/lsp-zero.nvim");
@@ -196,6 +203,7 @@ in
         extraPackages = with pkgs; [
           nixd
           nodePackages.typescript-language-server
+          nodePackages.prettier
           pyright
         ];
       };
