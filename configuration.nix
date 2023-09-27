@@ -135,6 +135,10 @@ in
           gruvbox-material
           nvim-treesitter.withAllGrammars
 
+          # Snippets
+          friendly-snippets
+          luasnip
+
           # Auto-completion
           nvim-cmp
           cmp-buffer
