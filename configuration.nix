@@ -176,7 +176,7 @@ in
             plugin = pkgs.vimPlugins.nvim-lspconfig;
             type = "lua";
             config = ''
-              require'lspconfig'.nixd.setup{}
+              require'lspconfig'.nil_ls.setup{}
               require'lspconfig'.pyright.setup{}
               require'lspconfig'.tsserver.setup{}
             '';
@@ -203,7 +203,7 @@ in
           }
         ];
         extraPackages = with pkgs; [
-          nixd
+          nil
           nodePackages.typescript-language-server
           nodePackages.prettier
           pyright
