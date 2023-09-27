@@ -142,9 +142,10 @@ in
           # Auto-completion
           nvim-cmp
           cmp-buffer
-          cmp-path
           cmp-nvim-lsp
           cmp-nvim-lua
+          cmp-path
+          cmp_luasnip
 
           {
             plugin = pkgs.vimPlugins.nvim-surround;
