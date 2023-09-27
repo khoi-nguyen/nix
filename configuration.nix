@@ -226,8 +226,8 @@ in
 
   environment.systemPackages = with pkgs; [
     alacritty
-    chromium
     gnome-network-displays
+    google-chrome
     home-manager
     nodejs_20
     mosh
