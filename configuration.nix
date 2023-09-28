@@ -235,11 +235,11 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    alacritty
     gnome-network-displays
     google-chrome
     home-manager
     killall
+    kitty
     nodejs_20
     mosh
     nerdfonts
