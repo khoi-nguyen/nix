@@ -240,6 +240,7 @@ in
     gnome-network-displays
     google-chrome
     home-manager
+    killall
     nodejs_20
     mosh
     nerdfonts
