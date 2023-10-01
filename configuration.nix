@@ -15,6 +15,7 @@ let
     };
   };
   pythonEnv = ps: with ps; [
+    matplotlib
     numpy
     sympy
   ];
