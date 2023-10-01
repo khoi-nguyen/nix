@@ -2,15 +2,16 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ pkgs, lib, ... }:
 
 let
-  fromGithub = ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
+  fromGithub = rev: ref: repo: pkgs.vimUtils.buildVimPluginFrom2Nix {
     pname = "${lib.strings.sanitizeDerivationName repo}";
     version = ref;
     src = builtins.fetchGit {
       url = "https://github.com/${repo}.git";
       ref = ref;
+      rev = rev;
     };
   };
 in
@@ -163,7 +164,7 @@ in
             config = "require('gitsigns').setup()";
           }
           {
-            plugin = (fromGithub "HEAD" "VonHeikemen/lsp-zero.nvim");
+            plugin = (fromGithub "5dc9d9b67f323c3e73c966aaa70728b7c0c380b3" "v3.x" "VonHeikemen/lsp-zero.nvim");
             type = "lua";
             config = ''
               local lsp_zero = require('lsp-zero')
