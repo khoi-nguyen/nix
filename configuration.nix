@@ -14,6 +14,10 @@ let
       rev = rev;
     };
   };
+  pythonEnv = ps: with ps; [
+    numpy
+    sympy
+  ];
 in
 
 {
@@ -245,7 +249,7 @@ in
     mosh
     nerdfonts
     pandoc
-    python3
+    (python3.withPackages pythonEnv)
     poppler_utils
     ripgrep
     spotify
