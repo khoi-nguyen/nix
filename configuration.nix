@@ -17,6 +17,7 @@ in
       ./hardware-configuration.nix
       ./neovim.nix
       ./keyboard.nix
+      ./i3.nix
       <home-manager/nixos>
     ];
 
@@ -27,19 +28,6 @@ in
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_GB.UTF-8";
-
-  services.xserver.enable = true;
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-photos
-    gnome-text-editor
-    gnome-tour
-    gnome.cheese
-    gnome.epiphany
-    gnome.gnome-characters
-    gnome.gnome-music
-  ];
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
