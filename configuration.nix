@@ -32,6 +32,10 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
+
   # Enable sound with pipewire.
   sound.enable = true;
   hardware.pulseaudio.enable = false;
@@ -106,6 +110,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    gnome.gnome-bluetooth
     gnome-network-displays
     google-chrome
     home-manager
