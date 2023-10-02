@@ -36,6 +36,7 @@ in
         "${mod}+d" = "kill";
         "${mod}+f" = "fullscreen toggle";
         "${mod}+m" = "move workspace to output right";
+        "${mod}+n" = "exec i3-input -F 'rename workspace to \"%s\"' -P 'New name for this workspace: '";
         "${mod}+r" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+Shift+r" = "reload";
         "${mod}+x" = "exec i3lock -c 000000";
@@ -85,7 +86,6 @@ in
       };
     };
     extraConfig = ''
-      bindsym Mod4+n exec i3-input -F 'rename workspace to "%s"' -P 'New name for this workspace: '
       default_border pixel 1
       default_floating_border pixel 1
     '';
