@@ -73,6 +73,12 @@ in
         userName = "Khoi Nguyen";
         userEmail = "khoi@nguyen.me.uk";
       };
+      kitty = {
+        enable = true;
+        settings = {
+          confirm_os_window_close = 0;
+        };
+      };
       home-manager.enable = true;
       tmux = {
         enable = true;
