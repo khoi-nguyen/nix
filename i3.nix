@@ -83,5 +83,9 @@ in
         "${mod}+v" = "split v";
       };
     };
+    extraConfig = ''
+      default_border pixel 1
+      default_floating_border pixel 1
+    '';
   };
 }
