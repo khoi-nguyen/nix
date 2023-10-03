@@ -36,7 +36,7 @@ in
         "${mod}+d" = "kill";
         "${mod}+f" = "fullscreen toggle";
         "${mod}+m" = "move workspace to output right";
-        "${mod}+Shift+m" = "autorandr --change";
+        "${mod}+Shift+m" = "exec autorandr --change";
         "${mod}+n" = "exec i3-input -F 'rename workspace to \"%s\"' -P 'New name for this workspace: '";
         "${mod}+r" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+Shift+r" = "reload";
