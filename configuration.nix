@@ -116,6 +116,7 @@ in
     home-manager
     killall
     kitty
+    maim
     nodejs_20
     mosh
     nerdfonts
@@ -129,6 +130,7 @@ in
     typst
     vifm
     vscode
+    xclip
     zathura
   ];
 

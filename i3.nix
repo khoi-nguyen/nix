@@ -41,6 +41,7 @@ in
         "${mod}+r" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "${mod}+Shift+r" = "reload";
         "${mod}+x" = "exec i3lock -c 000000";
+        "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
 
         # Layouts
         "${mod}+apostrophe" = "layout stacking";
