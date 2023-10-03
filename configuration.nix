@@ -110,7 +110,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    gnome.gnome-bluetooth
+    autorandr
     gnome-network-displays
     google-chrome
     home-manager
