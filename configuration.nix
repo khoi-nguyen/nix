@@ -126,6 +126,7 @@ in
     spotify
     teams
     tmux
+    typst
     vifm
     vscode
     zathura

@@ -34,6 +34,7 @@ in
       gruvbox-material
       nvim-treesitter.withAllGrammars
       nvim-web-devicons
+      typst-vim
 
       # Snippets
       friendly-snippets
@@ -78,6 +79,7 @@ in
           require'lspconfig'.nil_ls.setup{}
           require'lspconfig'.pyright.setup{}
           require'lspconfig'.tsserver.setup{}
+          require'lspconfig'.typst_lsp.setup{}
         '';
       }
       {
@@ -106,6 +108,7 @@ in
       nodePackages.typescript-language-server
       nodePackages.prettier
       pyright
+      typst-lsp
     ];
   };
 
