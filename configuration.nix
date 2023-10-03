@@ -128,6 +128,7 @@ in
     tmux
     vifm
     vscode
+    zathura
   ];
 
   programs.fish.enable = true;
