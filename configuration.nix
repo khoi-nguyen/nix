@@ -110,6 +110,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    (python3.withPackages pythonEnv)
     acpilight
     arandr
     autorandr
@@ -119,11 +120,10 @@ in
     killall
     kitty
     maim
-    nodejs_20
     mosh
     nerdfonts
+    nodejs_20
     pandoc
-    (python3.withPackages pythonEnv)
     poppler_utils
     ripgrep
     spotify
