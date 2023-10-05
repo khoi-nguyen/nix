@@ -110,6 +110,7 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    acpilight
     arandr
     autorandr
     gnome-network-displays
@@ -132,6 +133,7 @@ in
     vifm
     vscode
     xclip
+    xournalpp
     zathura
   ];
 
