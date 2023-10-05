@@ -39,6 +39,7 @@ in
         "${mod}+Shift+m" = "exec autorandr --change";
         "${mod}+n" = "exec i3-input -F 'rename workspace to \"%s\"' -P 'New name for this workspace: '";
         "${mod}+r" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+        "Mod1+r" = "mode resize";
         "${mod}+Shift+r" = "reload";
         "${mod}+x" = "exec i3lock -c 000000";
         "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
@@ -85,6 +86,16 @@ in
         # Split
         "${mod}+w" = "split h";
         "${mod}+v" = "split v";
+      };
+      modes = {
+        resize = {
+          "h" = "resize shrink width 10 px or 10 ppt";
+          "j" = "resize grow height 10 px or 10 ppt";
+          "k" = "resize shrink height 10 px or 10 ppt";
+          "l" = "resize grow width 10 px or 10 ppt";
+          "Escape" = "mode default";
+          "Return" = "mode default";
+        };
       };
     };
     extraConfig = ''
