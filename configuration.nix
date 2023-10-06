@@ -83,6 +83,7 @@ in
           confirm_os_window_close = 0;
           font = "Inconsolata";
         };
+        theme = "Gruvbox Dark";
       };
       home-manager.enable = true;
       tmux = {
