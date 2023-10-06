@@ -33,6 +33,8 @@ in
       keybindings = {
         "${mod}+Return" = "exec ${pkgs.kitty}/bin/kitty";
         "${mod}+a" = "focus parent";
+        "${mod}+b" = "exec --no-startup-id google-chrome-stable";
+        "${mod}+Shift+b" = "exec --no-startup-id qutebrowser";
         "${mod}+d" = "kill";
         "${mod}+f" = "fullscreen toggle";
         "${mod}+m" = "move workspace to output right";
