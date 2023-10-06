@@ -105,6 +105,8 @@ in
         '';
       };
     };
+
+    services.dunst.enable = true;
   };
 
 # Allow unfree packages
@@ -120,6 +122,7 @@ in
     home-manager
     killall
     kitty
+    libnotify
     maim
     mosh
     nodejs_20
