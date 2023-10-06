@@ -81,6 +81,7 @@ in
         enable = true;
         settings = {
           confirm_os_window_close = 0;
+          font = "Inconsolata";
         };
       };
       home-manager.enable = true;
@@ -121,7 +122,6 @@ in
     kitty
     maim
     mosh
-    nerdfonts
     nodejs_20
     pandoc
     poppler_utils
@@ -136,6 +136,10 @@ in
     xclip
     xournalpp
     zathura
+  ];
+
+  fonts.packages = with pkgs; [
+    nerdfonts
   ];
 
   programs.fish.enable = true;
