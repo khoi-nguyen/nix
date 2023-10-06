@@ -125,6 +125,7 @@ in
     nodejs_20
     pandoc
     poppler_utils
+    qutebrowser
     ripgrep
     spotify
     teams
