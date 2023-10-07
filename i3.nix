@@ -103,6 +103,7 @@ in
     extraConfig = ''
       default_border pixel 1
       default_floating_border pixel 1
+      exec --nostartup-id picom -b
     '';
   };
 }

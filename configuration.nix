@@ -80,6 +80,7 @@ in
       kitty = {
         enable = true;
         settings = {
+          background_opacity = "0.9";
           confirm_os_window_close = 0;
           font = "Inconsolata";
         };
@@ -108,6 +109,7 @@ in
     };
 
     services.dunst.enable = true;
+    services.picom.enable = true;
   };
 
 # Allow unfree packages
