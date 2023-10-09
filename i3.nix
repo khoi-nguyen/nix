@@ -88,6 +88,12 @@ in
         # Split
         "${mod}+w" = "split h";
         "${mod}+v" = "split v";
+
+        "XF86AudioRaiseVolume" = "exec amixer -D pipewire sset Master 5%+";
+        "XF86AudioLowerVolume" = "exec amixer -D pipewire sset Master 5%-";
+        "XF86AudioMute" = "exec amixer -D pipewire set Master 1+ toggle";
+        "XF86MonBrightnessUp" = "exec light -A 5";
+        "XF86MonBrightnessDown" = "exec light -U 5";
       };
       modes = {
         resize = {
