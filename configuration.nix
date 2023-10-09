@@ -49,7 +49,7 @@ in
 
   users.users.khoi = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" ];
     shell = pkgs.fish;
   };
 
