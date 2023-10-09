@@ -47,6 +47,7 @@ in
     pulse.enable = true;
   };
 
+  users.groups.video = {};
   users.users.khoi = {
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" "video" ];
@@ -147,6 +148,7 @@ in
   ];
 
   programs.fish.enable = true;
+  programs.light.enable = true;
 
   system.stateVersion = "23.05";
 }
