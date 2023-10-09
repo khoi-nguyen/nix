@@ -120,7 +120,6 @@ in
     acpilight
     arandr
     autorandr
-    gnome-network-displays
     google-chrome
     home-manager
     killall
@@ -134,7 +133,6 @@ in
     qutebrowser
     ripgrep
     spotify
-    teams
     tmux
     typst
     vifm
