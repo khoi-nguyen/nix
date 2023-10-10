@@ -85,6 +85,10 @@ in
           confirm_os_window_close = 0;
           font = "Inconsolata";
         };
+        keybindings = {
+          "ctrl+equal" = "increase_font_size";
+          "ctrl+minus" = "decrease_font_size";
+        };
         theme = "Gruvbox Dark";
       };
       home-manager.enable = true;
