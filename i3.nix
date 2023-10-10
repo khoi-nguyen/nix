@@ -43,7 +43,7 @@ in
         "${mod}+r" = "exec ${pkgs.dmenu}/bin/dmenu_run";
         "Mod1+r" = "mode resize";
         "${mod}+Shift+r" = "reload";
-        "${mod}+x" = "exec i3lock -c 000000";
+        "${mod}+x" = "exec --no-startup-id loginctl lock-session";
         "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
 
         # Layouts
@@ -110,6 +110,7 @@ in
       default_border pixel 1
       default_floating_border pixel 1
       exec --nostartup-id picom -b
+      exec --no-startup-id xss-lock --transfer-sleep-lock --i3lock --nofork
     '';
   };
 }

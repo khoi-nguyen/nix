@@ -149,6 +149,7 @@ in
 
   programs.fish.enable = true;
   programs.light.enable = true;
+  programs.xss-lock.enable = true;
 
   system.stateVersion = "23.05";
 }
