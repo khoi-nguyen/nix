@@ -94,7 +94,7 @@ in
       home-manager.enable = true;
       rofi = {
         enable = true;
-        theme = "gruvbox-dark";
+        theme = ./rofi.asi;
       };
       tmux = {
         enable = true;
@@ -148,6 +148,7 @@ in
     ripgrep
     rofi
     spotify
+    teams-for-linux
     tmux
     typst
     vifm
