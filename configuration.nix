@@ -92,6 +92,10 @@ in
         theme = "Gruvbox Dark";
       };
       home-manager.enable = true;
+      rofi = {
+        enable = true;
+        theme = "gruvbox-dark";
+      };
       tmux = {
         enable = true;
         extraConfig = ''
@@ -142,6 +146,7 @@ in
     poppler_utils
     qutebrowser
     ripgrep
+    rofi
     spotify
     tmux
     typst

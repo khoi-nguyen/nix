@@ -18,7 +18,6 @@ in
     windowManager.i3 = {
       enable = true;
       extraPackages = with pkgs; [
-        dmenu
         i3status
         i3lock
       ];
@@ -40,7 +39,7 @@ in
         "${mod}+m" = "move workspace to output right";
         "${mod}+Shift+m" = "exec autorandr --change";
         "${mod}+n" = "exec i3-input -F 'rename workspace to \"%s\"' -P 'New name for this workspace: '";
-        "${mod}+r" = "exec ${pkgs.dmenu}/bin/dmenu_run";
+        "${mod}+r" = "exec --no-startup-id rofi -show drun";
         "Mod1+r" = "mode resize";
         "${mod}+Shift+r" = "reload";
         "${mod}+x" = "exec --no-startup-id loginctl lock-session";
