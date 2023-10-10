@@ -109,6 +109,11 @@ in
       };
     };
 
+    services.redshift = {
+      enable = true;
+      latitude = 50.8476;
+      longitude = 4.3572;
+    };
     services.dunst.enable = true;
     services.picom.enable = true;
   };
