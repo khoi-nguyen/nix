@@ -95,7 +95,7 @@ in
           "ctrl+equal" = "increase_font_size";
           "ctrl+minus" = "decrease_font_size";
         };
-        theme = "Gruvbox Dark";
+        theme = "Nord";
       };
       home-manager.enable = true;
       rofi = {
