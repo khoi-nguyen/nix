@@ -6,8 +6,11 @@
 
 let
   pythonEnv = ps: with ps; [
+    jupyter
     matplotlib
+    notebook
     numpy
+    pip
     sympy
   ];
 in
