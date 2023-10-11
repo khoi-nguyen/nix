@@ -63,7 +63,13 @@ in
     programs = {
       fish = {
         enable = true;
-        interactiveShellInit = "fish_vi_key_bindings";
+        interactiveShellInit = ''
+          fish_vi_key_bindings
+          set fish_greeting
+        '';
+        plugins = [
+          { name = "pure"; src = pkgs.fishPlugins.pure.src; }
+        ];
         shellAbbrs = {
           g = "git";
           m = "make";
