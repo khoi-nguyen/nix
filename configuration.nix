@@ -160,6 +160,7 @@ in
     teams-for-linux
     tmux
     typst
+    unzip
     vifm
     vscode
     xclip
