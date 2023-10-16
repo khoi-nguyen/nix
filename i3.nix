@@ -45,6 +45,10 @@ in
         "${mod}+x" = "exec --no-startup-id loginctl lock-session";
         "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
 
+        # Scratchpad
+        "${mod}+minus" = "scratchpad show";
+        "${mod}+Shift+minus" = "move scratchpad";
+
         # Layouts
         "${mod}+apostrophe" = "layout stacking";
         "${mod}+comma" = "layout tabbed";
