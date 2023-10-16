@@ -145,6 +145,7 @@ in
     autorandr
     google-chrome
     home-manager
+    inotify-tools
     killall
     kitty
     libnotify
