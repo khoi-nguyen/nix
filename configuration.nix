@@ -10,7 +10,9 @@ let
     matplotlib
     notebook
     numpy
+    pandas
     pip
+    scipy
     sympy
   ];
 in
