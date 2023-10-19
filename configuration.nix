@@ -11,6 +11,7 @@ let
     notebook
     numpy
     pandas
+    panflute
     pip
     scipy
     sympy
