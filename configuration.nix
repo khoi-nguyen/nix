@@ -167,6 +167,7 @@ in
     killall
     kitty
     libnotify
+    libreoffice
     maim
     mosh
     nodejs_20
