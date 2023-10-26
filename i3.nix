@@ -39,6 +39,7 @@ in
         "${mod}+m" = "move workspace to output right";
         "${mod}+Shift+m" = "exec autorandr --change";
         "${mod}+n" = "exec i3-input -F 'rename workspace to \"%s\"' -P 'New name for this workspace: '";
+        "${mod}+p" = "exec --no-startup-id xopen";
         "${mod}+r" = "exec --no-startup-id rofi -show drun";
         "Mod1+r" = "mode resize";
         "${mod}+Shift+r" = "reload";
