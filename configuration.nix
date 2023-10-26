@@ -163,6 +163,7 @@ in
     google-chrome
     home-manager
     inotify-tools
+    julia
     killall
     kitty
     libnotify
