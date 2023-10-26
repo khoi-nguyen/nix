@@ -80,7 +80,7 @@ in
           g = "git";
           m = "make";
           n = "nvim";
-          nr = "sudo cp ~/git/nix/* /etc/nixos/ && sudo nixos-rebuild switch";
+          nr = "sudo cp -r ~/git/nix/* /etc/nixos/ && sudo nixos-rebuild switch";
           ta = "tmux attach -t";
           tn = "tmux new -s";
         };
