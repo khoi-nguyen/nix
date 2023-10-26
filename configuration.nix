@@ -66,6 +66,18 @@ in
     home.homeDirectory = "/home/khoi";
     home.stateVersion = "23.05";
 
+    xdg.mimeApps = {
+      enable = true;
+      associations.added = {
+        "application/pdf" = ["org.pwmt.zathura.desktop"];
+        "image/jpeg" = ["feh.desktop"];
+      };
+      defaultApplications = {
+        "application/pdf" = ["org.pwmt.zathura.desktop"];
+        "image/jpeg" = ["feh.desktop"];
+      };
+    };
+
     programs = {
       fish = {
         enable = true;
