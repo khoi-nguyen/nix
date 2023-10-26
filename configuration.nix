@@ -146,6 +146,8 @@ in
     acpilight
     arandr
     autorandr
+    fd
+    feh
     google-chrome
     home-manager
     inotify-tools
