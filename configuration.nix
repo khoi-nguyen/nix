@@ -65,6 +65,12 @@ in
     home.username = "khoi";
     home.homeDirectory = "/home/khoi";
     home.stateVersion = "23.05";
+    home.packages = [
+      (pkgs.buildEnv {
+        name = "my-scripts";
+        paths = [ ./scripts ];
+      })
+    ];
 
     xdg.mimeApps = {
       enable = true;

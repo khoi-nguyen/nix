@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+cd ~
+set file "$(fd .pdf | rofi -dmenu)"
+
+if test $status -eq 0
+  xdg-open "$file" &
+end
