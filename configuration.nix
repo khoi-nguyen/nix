@@ -183,12 +183,12 @@ in
     ripgrep
     rofi
     spotify
-    teams-for-linux
     tmux
     typst
     unzip
     vifm
     vscode
+    w3m
     xclip
     xournalpp
     zathura
