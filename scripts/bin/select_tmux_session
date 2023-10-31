@@ -1,0 +1,12 @@
+#!/usr/bin/env fish
+
+set session_count "$(tmux list-sessions | wc -l)"
+
+if test $session_count -eq 0
+  exit 1
+end
+
+set session "$(tmux list-sessions | awk -F ":" '{print $1}' | rofi -dmenu -i)"
+if test $status -eq 0
+  kitty tmux attach -t $session
+end
