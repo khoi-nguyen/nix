@@ -175,6 +175,7 @@ in
     libreoffice
     maim
     mosh
+    neomutt
     nodejs_20
     pandoc
     poppler_utils
