@@ -43,7 +43,7 @@ in
         "${mod}+r" = "exec --no-startup-id rofi -show drun";
         "Mod1+r" = "mode resize";
         "${mod}+Shift+r" = "reload";
-        "${mod}+p" = "exec --no-startup-id select_tmux_session";
+        "${mod}+t" = "exec --no-startup-id select_tmux_session";
         "${mod}+x" = "exec --no-startup-id loginctl lock-session";
         "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
 
