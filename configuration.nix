@@ -113,7 +113,6 @@ in
         settings = {
           background_opacity = "0.9";
           confirm_os_window_close = 0;
-          font = "Inconsolata";
         };
         keybindings = {
           "ctrl+equal" = "increase_font_size";
