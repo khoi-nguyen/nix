@@ -27,6 +27,7 @@
         enable = true;
         vimKeys = true;
         editor = "nvim";
+        extraConfig = builtins.readFile ./neomuttrc;
       };
     };
   };
