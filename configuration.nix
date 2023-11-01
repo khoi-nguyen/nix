@@ -24,6 +24,7 @@ in
       ./neovim.nix
       ./keyboard.nix
       ./i3.nix
+      ./email.nix
       <home-manager/nixos>
     ];
 
@@ -175,7 +176,6 @@ in
     libreoffice
     maim
     mosh
-    neomutt
     nodejs_20
     pandoc
     poppler_utils
