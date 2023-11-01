@@ -97,7 +97,7 @@ in
         ];
         shellAbbrs = {
           g = "git";
-          m = "make";
+          m = "neomutt";
           n = "nvim";
           nr = "sudo cp -r ~/git/nix/* /etc/nixos/ && sudo nixos-rebuild switch";
           ta = "tmux attach -t";
