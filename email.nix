@@ -26,6 +26,7 @@
       neomutt = {
         enable = true;
         vimKeys = true;
+        sidebar.enable = true;
         editor = "nvim";
         extraConfig = builtins.readFile ./neomuttrc;
       };
