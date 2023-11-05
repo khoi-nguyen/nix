@@ -28,8 +28,6 @@ in
       set tabstop=2
       set number
       set termguicolors
-
-      hi Normal guibg=NONE ctermbg=NONE
     '';
     plugins = with pkgs.vimPlugins; [
       emmet-vim
