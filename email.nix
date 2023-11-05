@@ -29,6 +29,9 @@
           };
           neomutt = {
             enable = true;
+            extraConfig = ''
+              macro index,pager a "<save-message>=[Gmail]/All<tab><enter><enter>" "Archive"
+            '';
           };
         };
       };
