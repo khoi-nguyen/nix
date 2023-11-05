@@ -10,13 +10,26 @@
           realName = "Khôi Nguyễn";
           passwordCommand = "cat ~/.passwords | grep nguyen.me.uk | awk '{ print $2 }'";
           flavor = "gmail.com";
+          folders = {
+            drafts = "[Gmail]/Drafts";
+            sent = "[Gmail]/Sent Mail";
+            trash = "[Gmail]/Bin";
+          };
+          signature = {
+            text = ''
+              Khôi Nguyễn
+            '';
+            showSignature = "append";
+          };
           msmtp.enable = true;
           mbsync = {
             enable = true;
             create = "both";
             expunge = "both";
           };
-          neomutt.enable = true;
+          neomutt = {
+            enable = true;
+          };
         };
       };
     };
