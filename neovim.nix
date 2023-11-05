@@ -54,6 +54,25 @@ in
       cmp_luasnip
 
       {
+        plugin = pkgs.vimPlugins.iron-nvim;
+        type = "lua";
+        config = ''
+          require("iron.core").setup({
+            config = {
+              scratch_repl = true,
+              repl_open_cmd = require("iron.view").split("40%"),
+            },
+            keymaps = {
+              send_motion = "<localleader>sc",
+              visual_send = "<localleader>sc",
+              send_file = "<localleader>sf",
+              exit = "<localleader>sq",
+              clear = "<localleader>cl",
+            },
+          })
+        '';
+      }
+      {
         plugin = pkgs.vimPlugins.nvim-surround;
         type = "lua";
         config = "require('nvim-surround').setup({})";
