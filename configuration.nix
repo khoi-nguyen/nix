@@ -183,6 +183,7 @@ in
     ripgrep
     rofi
     spotify
+    teams-for-linux
     tmux
     typst
     unzip
@@ -201,6 +202,10 @@ in
   programs.fish.enable = true;
   programs.light.enable = true;
   programs.xss-lock.enable = true;
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-24.8.6"
+  ];
 
   system.stateVersion = "23.05";
 }
