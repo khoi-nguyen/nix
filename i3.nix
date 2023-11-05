@@ -24,6 +24,8 @@ in
     };
   };
 
+  services.gnome.gnome-keyring.enable = true;
+
   home-manager.users.khoi.xsession.windowManager.i3 = {
     enable = true;
     config = {
