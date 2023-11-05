@@ -115,7 +115,6 @@ in
       exec --no-startup-id picom -b
       exec --no-startup-id xss-lock --transfer-sleep-lock --i3lock --nofork
       gaps inner 5
-      gaps outer 5
       smart_gaps inverse_outer
     '';
   };
