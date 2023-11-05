@@ -27,6 +27,7 @@ in
       set softtabstop=2
       set tabstop=2
       set number
+      set termguicolors
 
       hi Normal guibg=NONE ctermbg=NONE
     '';
@@ -37,6 +38,8 @@ in
       nvim-treesitter.withAllGrammars
       nvim-web-devicons
       typst-vim
+      vim-pandoc-syntax
+      vim-pandoc
 
       # Snippets
       friendly-snippets
