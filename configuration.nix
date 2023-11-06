@@ -114,6 +114,11 @@ in
         settings = {
           background_opacity = "0.95";
           confirm_os_window_close = 0;
+          font_family = "Inconsolata Nerd Font Mono";
+          bold_font = "Inconsolata Nerd Font Mono Extra Bold";
+          italic_font = "Inconsolata Nerd Font Mono Extra Bold Italic";
+          bold_italic_font = "Inconsolata Nerd Font Mono Italic";
+          font_size = "13.0";
         };
         keybindings = {
           "ctrl+equal" = "increase_font_size";
