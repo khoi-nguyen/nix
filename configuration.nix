@@ -82,6 +82,8 @@ in
       defaultApplications = {
         "application/pdf" = ["org.pwmt.zathura.desktop"];
         "image/jpeg" = ["feh.desktop"];
+        "x-scheme-handler/msteams" = ["teams-for-linux.desktop"];
+        "x-scheme-handler/webcal" = ["google-chrome.desktop"];
       };
     };
 
