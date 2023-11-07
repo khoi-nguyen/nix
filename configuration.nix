@@ -191,11 +191,11 @@ in
     tmux
     typst
     unzip
-    vifm
     vscode
     w3m
     xclip
     xournalpp
+    yazi
     zathura
   ];
 
