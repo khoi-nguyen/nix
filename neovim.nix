@@ -119,8 +119,9 @@ in
             },
             sources = {
               {name = 'luasnip'},
-              {name = 'path'},
               {name = 'nvim_lsp'},
+              {name = 'path'},
+              {name = 'buffer'},
             },
             mapping = cmp.mapping.preset.insert({
               ['<Tab>'] = cmp_action.luasnip_supertab(),
