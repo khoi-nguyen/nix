@@ -150,6 +150,7 @@ in
           set -g prefix \`
         '';
         plugins = with pkgs.tmuxPlugins; [
+          power-theme
           resurrect
           continuum
         ];
