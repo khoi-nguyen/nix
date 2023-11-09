@@ -42,8 +42,25 @@ in
       vim-pandoc
 
       # Snippets
+      {
+        plugin = pkgs.vimPlugins.luasnip;
+        type = "lua";
+        config = ''
+          require("luasnip.loaders.from_snipmate").lazy_load({paths = "${./snippets}/"})
+          local ls = require('luasnip')
+          vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
+          vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
+          vim.keymap.set({"i", "s"}, "<C-H>", function() ls.jump(-1) end, {silent = true})
+        '';
+      }
       friendly-snippets
-      luasnip
+      {
+        plugin = pkgs.vimPlugins.friendly-snippets;
+        type = "lua";
+        config = ''
+          require("luasnip.loaders.from_vscode").lazy_load()
+        '';
+      }
 
       # Auto-completion
       nvim-cmp
