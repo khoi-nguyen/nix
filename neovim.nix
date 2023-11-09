@@ -47,10 +47,6 @@ in
         type = "lua";
         config = ''
           require("luasnip.loaders.from_snipmate").lazy_load({paths = "${./snippets}/"})
-          local ls = require('luasnip')
-          vim.keymap.set({"i"}, "<C-K>", function() ls.expand() end, {silent = true})
-          vim.keymap.set({"i", "s"}, "<C-L>", function() ls.jump( 1) end, {silent = true})
-          vim.keymap.set({"i", "s"}, "<C-H>", function() ls.jump(-1) end, {silent = true})
         '';
       }
       friendly-snippets
@@ -111,6 +107,24 @@ in
           lsp_zero.on_attach(function(client, bufnr)
             lsp_zero.default_keymaps({buffer = bufnr})
           end)
+
+          local cmp = require('cmp')
+          local cmp_format = require('lsp-zero').cmp_format()
+          local cmp_action = require('lsp-zero').cmp_action()
+
+          cmp.setup({
+            sources = {
+              {name = 'luasnip'},
+              {name = 'path'},
+              {name = 'nvim_lsp'},
+            },
+            mapping = cmp.mapping.preset.insert({
+              ['<Tab>'] = cmp_action.luasnip_supertab(),
+              ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+              ['<CR>'] = cmp.mapping.confirm({select = false}),
+            }),
+            formatting = cmp_format,
+          })
         '';
       }
       {
