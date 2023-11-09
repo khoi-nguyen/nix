@@ -149,6 +149,10 @@ in
           set -g pane-base-index 1
           set -g prefix \`
         '';
+        plugins = with pkgs.tmuxPlugins; [
+          resurrect
+          continuum
+        ];
       };
     };
 
