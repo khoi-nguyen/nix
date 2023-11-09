@@ -41,6 +41,16 @@ in
       vim-pandoc-syntax
       vim-pandoc
 
+      {
+        plugin = pkgs.vimPlugins.lualine-nvim;
+        type = "lua";
+        config = ''
+          require('lualine').setup({
+            options = { theme = 'gruvbox' }
+          })
+        '';
+      }
+
       # Snippets
       {
         plugin = pkgs.vimPlugins.luasnip;
@@ -113,10 +123,6 @@ in
           local cmp_action = require('lsp-zero').cmp_action()
 
           cmp.setup({
-            preselect = 'item',
-            completion = {
-              completeopt = 'menu,menuone,noinsert'
-            },
             sources = {
               {name = 'luasnip'},
               {name = 'nvim_lsp'},
