@@ -15,11 +15,5 @@
     nameservers = ["172.17.0.200" "172.17.0.99"];
   };
 
-  services.openssh = {
-    enable = true;
-    settings = {
-      PasswordAuthentication = true;
-      PermitRootLogin = "yes";
-    };
-  };
+  services.openssh.enable = true;
 }
