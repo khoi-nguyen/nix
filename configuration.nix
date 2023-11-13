@@ -20,17 +20,15 @@ in
 {
   imports =
     [
+      ./tuxie.nix
       ./hardware-configuration.nix
       ./neovim.nix
-      ./email.nix
-      ./gui.nix
       <home-manager/nixos>
     ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "tuxie";
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_GB.UTF-8";
@@ -107,7 +105,6 @@ in
     };
   };
 
-# Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
