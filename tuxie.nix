@@ -1,7 +1,8 @@
 {
   imports = [
-    ./gui.nix
+    ./common.nix
     ./email.nix
+    ./gui.nix
   ];
 
   networking.hostName = "tuxie";

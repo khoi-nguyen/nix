@@ -20,7 +20,6 @@ in
 {
   imports =
     [
-      ./tuxie.nix
       ./hardware-configuration.nix
       ./neovim.nix
       <home-manager/nixos>
