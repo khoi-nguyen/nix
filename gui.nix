@@ -71,6 +71,28 @@
     nerdfonts
   ];
 
+  environment.systemPackages = with pkgs; [
+    acpilight
+    arandr
+    autorandr
+    feh
+    google-chrome
+    inotify-tools
+    killall
+    kitty
+    libnotify
+    libreoffice
+    maim
+    poppler_utils
+    qutebrowser
+    rofi
+    spotify
+    teams-for-linux
+    vscode
+    xournalpp
+    zathura
+  ];
+
   programs.light.enable = true;
   programs.xss-lock.enable = true;
 }

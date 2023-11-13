@@ -112,38 +112,19 @@ in
 
   environment.systemPackages = with pkgs; [
     (python3.withPackages pythonEnv)
-    acpilight
-    arandr
-    autorandr
     fd
-    feh
-    google-chrome
     home-manager
-    inotify-tools
     julia
-    killall
-    kitty
-    libnotify
-    libreoffice
-    maim
     mosh
     nodejs_20
     pandoc
-    poppler_utils
-    qutebrowser
     ripgrep
-    rofi
-    spotify
-    teams-for-linux
     tmux
     typst
     unzip
-    vscode
     w3m
     xclip
-    xournalpp
     yazi
-    zathura
   ];
 
   programs.fish.enable = true;
