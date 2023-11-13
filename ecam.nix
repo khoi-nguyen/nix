@@ -1,4 +1,8 @@
 {
+  imports = [
+    ./common.nix
+  ];
+
   networking = {
     hostName = "ngy";
     interfaces.eth0.ipv4.addresses = [
