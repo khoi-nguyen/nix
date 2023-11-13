@@ -22,9 +22,8 @@ in
     [
       ./hardware-configuration.nix
       ./neovim.nix
-      ./keyboard.nix
-      ./i3.nix
       ./email.nix
+      ./gui.nix
       <home-manager/nixos>
     ];
 
@@ -35,24 +34,6 @@ in
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_GB.UTF-8";
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Bluetooth
-  hardware.bluetooth.enable = true;
-  services.blueman.enable = true;
-
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
 
   users.groups.video = {};
   users.users.khoi = {
@@ -72,20 +53,6 @@ in
         paths = [ ./scripts ];
       })
     ];
-
-    xdg.mimeApps = {
-      enable = true;
-      associations.added = {
-        "application/pdf" = ["org.pwmt.zathura.desktop"];
-        "image/jpeg" = ["feh.desktop"];
-      };
-      defaultApplications = {
-        "application/pdf" = ["org.pwmt.zathura.desktop"];
-        "image/jpeg" = ["feh.desktop"];
-        "x-scheme-handler/msteams" = ["teams-for-linux.desktop"];
-        "x-scheme-handler/webcal" = ["google-chrome.desktop"];
-      };
-    };
 
     programs = {
       fish = {
@@ -112,25 +79,7 @@ in
         userName = "Khoi Nguyen";
         userEmail = "khoi@nguyen.me.uk";
       };
-      kitty = {
-        enable = true;
-        settings = {
-          background_opacity = "0.95";
-          confirm_os_window_close = 0;
-          font_family = "Inconsolata Nerd Font Mono";
-          font_size = "12.0";
-        };
-        keybindings = {
-          "ctrl+equal" = "increase_font_size";
-          "ctrl+minus" = "decrease_font_size";
-        };
-        theme = "Nord";
-      };
       home-manager.enable = true;
-      rofi = {
-        enable = true;
-        theme = ./rofi.asi;
-      };
       tmux = {
         enable = true;
         extraConfig = ''
@@ -156,14 +105,6 @@ in
         ];
       };
     };
-
-    services.redshift = {
-      enable = true;
-      latitude = 50.8476;
-      longitude = 4.3572;
-    };
-    services.dunst.enable = true;
-    services.picom.enable = true;
   };
 
 # Allow unfree packages
@@ -205,13 +146,7 @@ in
     zathura
   ];
 
-  fonts.packages = with pkgs; [
-    nerdfonts
-  ];
-
   programs.fish.enable = true;
-  programs.light.enable = true;
-  programs.xss-lock.enable = true;
 
   system.stateVersion = "23.05";
 }
