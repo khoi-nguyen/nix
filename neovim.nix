@@ -123,6 +123,10 @@ in
           local cmp_action = require('lsp-zero').cmp_action()
 
           cmp.setup({
+            preselect = 'item',
+            completion = {
+              completeopt = 'menu,menuone,noinsert'
+            },
             sources = {
               {name = 'luasnip'},
               {name = 'nvim_lsp'},
@@ -130,8 +134,8 @@ in
               {name = 'buffer'},
             },
             mapping = cmp.mapping.preset.insert({
-              ['<Tab>'] = cmp_action.luasnip_supertab(),
-              ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+              ['<C-L>'] = cmp_action.luasnip_supertab(),
+              ['<C-H>'] = cmp_action.luasnip_shift_supertab(),
               ['<CR>'] = cmp.mapping.confirm({select = false}),
             }),
             formatting = cmp_format,
