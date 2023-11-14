@@ -20,5 +20,22 @@
     };
   };
 
-  services.openssh.enable = true;
+  services = {
+    openssh.enable = true;
+    nginx = {
+      enable = true;
+      clientMaxBodySize = "100M";
+      recommendedGzipSettings = true;
+      virtualHosts."ngy.ecam.be" = {
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:3000";
+        };
+        enableACME = true;
+      };
+    };
+  };
+
+  security.acme.certs = {
+    "ngy.ecam.be".email = "khoi@nguyen.me.uk";
+  };
 }
