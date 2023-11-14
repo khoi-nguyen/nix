@@ -56,7 +56,7 @@ in
         plugin = pkgs.vimPlugins.luasnip;
         type = "lua";
         config = ''
-          require("luasnip.loaders.from_snipmate").lazy_load({paths = "${../snippets}/"})
+          require("luasnip.loaders.from_snipmate").lazy_load({paths = "${./snippets}/"})
         '';
       }
       friendly-snippets
