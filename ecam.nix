@@ -13,6 +13,11 @@
     ];
     defaultGateway = "172.17.0.13";
     nameservers = ["172.17.0.200" "172.17.0.99"];
+
+    firewall = {
+      enable = true;
+      allowedTCPPorts = [ 22 80 443 8022 ];
+    };
   };
 
   services.openssh.enable = true;
