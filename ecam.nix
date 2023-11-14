@@ -41,4 +41,6 @@
       "ngy.ecam.be".email = "khoi@nguyen.me.uk";
     };
   };
+
+  users.users.nginx.extraGroups = [ "acme" ];
 }
