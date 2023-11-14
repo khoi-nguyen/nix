@@ -35,7 +35,10 @@
     };
   };
 
-  security.acme.certs = {
-    "ngy.ecam.be".email = "khoi@nguyen.me.uk";
+  security.acme = {
+    acceptTerms = true;
+    certs = {
+      "ngy.ecam.be".email = "khoi@nguyen.me.uk";
+    };
   };
 }
