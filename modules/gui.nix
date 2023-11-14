@@ -54,7 +54,7 @@
       };
       rofi = {
         enable = true;
-        theme = ./rofi.asi;
+        theme = ../home/rofi.asi;
       };
     };
 

@@ -20,7 +20,7 @@ in
 {
   imports =
     [
-      ./hardware-configuration.nix
+      ../hardware-configuration.nix
       ./neovim.nix
       <home-manager/nixos>
     ];
@@ -48,7 +48,7 @@ in
     home.packages = [
       (pkgs.buildEnv {
         name = "my-scripts";
-        paths = [ ./scripts ];
+        paths = [ ../scripts ];
       })
     ];
 

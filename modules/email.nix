@@ -44,7 +44,7 @@
         vimKeys = true;
         sidebar.enable = true;
         editor = "nvim";
-        extraConfig = builtins.readFile ./neomuttrc;
+        extraConfig = builtins.readFile ../home/neomuttrc;
       };
     };
   };
