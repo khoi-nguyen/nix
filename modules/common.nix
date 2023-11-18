@@ -6,6 +6,7 @@
 
 let
   pythonEnv = ps: with ps; [
+    antlr4-python3-runtime
     jupyter
     matplotlib
     notebook
