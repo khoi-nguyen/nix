@@ -111,9 +111,11 @@ in
   environment.systemPackages = with pkgs; [
     (python3.withPackages pythonEnv)
     fd
+    gnumake42
     home-manager
     julia
     mosh
+    mongodb
     nodejs_20
     pandoc
     ripgrep
