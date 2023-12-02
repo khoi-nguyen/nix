@@ -148,7 +148,13 @@ in
         config = ''
           require'lspconfig'.nil_ls.setup{}
           require'lspconfig'.pyright.setup{}
-          require'lspconfig'.tsserver.setup{}
+          require("lspconfig").tsserver.setup{
+            settings = {
+              implicitProjectConfiguration = { 
+                checkJs = true
+              },
+            }
+          }
           require'lspconfig'.typst_lsp.setup{}
         '';
       }
