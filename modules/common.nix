@@ -115,7 +115,6 @@ in
     home-manager
     julia
     mosh
-    mongodb
     nodejs_20
     pandoc
     ripgrep
