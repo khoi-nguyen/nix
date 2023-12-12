@@ -36,6 +36,7 @@ in
       fugitive
       gruvbox-material
       nvim-treesitter.withAllGrammars
+      nvim-treesitter-parsers.jsdoc
       nvim-web-devicons
       typst-vim
       vim-pandoc-syntax
