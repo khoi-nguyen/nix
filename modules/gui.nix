@@ -83,6 +83,7 @@
     libnotify
     libreoffice
     maim
+    networkmanagerapplet
     poppler_utils
     qutebrowser
     rofi
