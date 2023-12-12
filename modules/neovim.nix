@@ -102,7 +102,7 @@ in
       }
       {
         plugin = pkgs.vimPlugins.neoformat;
-        config = "autocmd BufWritePre *.ts,*.tsx,*.json,*.scss Neoformat";
+        config = "autocmd BufWritePre *.ts,*.tsx,*.json,*.scss,*.py Neoformat";
       }
       {
         plugin = pkgs.vimPlugins.gitsigns-nvim;
@@ -180,6 +180,7 @@ in
       }
     ];
     extraPackages = with pkgs; [
+      black
       nil
       nodePackages.typescript-language-server
       nodePackages.prettier
