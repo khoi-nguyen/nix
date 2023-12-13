@@ -92,7 +92,7 @@
     vscode
     xournalpp
     zathura
-    zoom
+    zoom-us
   ];
 
   programs.light.enable = true;
