@@ -128,5 +128,10 @@ in
 
   programs.fish.enable = true;
 
+  services.mysql = {
+    enable = true;
+    package = pkgs.mysql;
+  };
+
   system.stateVersion = "23.05";
 }
