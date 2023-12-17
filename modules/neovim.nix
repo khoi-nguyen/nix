@@ -28,8 +28,6 @@ in
       set tabstop=2
       set number
       set termguicolors
-
-      hi Normal guibg=NONE ctermbg=NONE
     '';
     plugins = with pkgs.vimPlugins; [
       emmet-vim
@@ -156,7 +154,6 @@ in
               },
             }
           }
-          require'lspconfig'.typst_lsp.setup{}
         '';
       }
       {
@@ -186,7 +183,6 @@ in
       nodePackages.typescript-language-server
       nodePackages.prettier
       pyright
-      typst-lsp
     ];
   };
 
