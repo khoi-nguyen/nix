@@ -77,6 +77,7 @@ in
         enable = true;
         userName = "Khoi Nguyen";
         userEmail = "khoi@nguyen.me.uk";
+        extraConfig.pull.rebase = false;
       };
       home-manager.enable = true;
       tmux = {
