@@ -97,4 +97,6 @@
 
   programs.light.enable = true;
   programs.xss-lock.enable = true;
+
+  virtualisation.docker.enable = true;
 }
