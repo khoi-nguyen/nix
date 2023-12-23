@@ -33,13 +33,22 @@ in
       emmet-vim
       fugitive
       gruvbox-material
-      nvim-treesitter.withAllGrammars
-      nvim-treesitter-parsers.jsdoc
       nvim-web-devicons
       typst-vim
       vim-pandoc-syntax
       vim-pandoc
 
+      {
+        plugin = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
+        type = "lua";
+        config = ''
+          require'nvim-treesitter.configs'.setup {
+            highlight = {
+              enable = true,
+            },
+          }
+        '';
+      }
       {
         plugin = pkgs.vimPlugins.lualine-nvim;
         type = "lua";
