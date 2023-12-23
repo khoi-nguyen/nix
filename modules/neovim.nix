@@ -101,7 +101,7 @@ in
       }
       {
         plugin = pkgs.vimPlugins.neoformat;
-        config = "autocmd BufWritePre *.ts,*.tsx,*.json,*.scss,*.py Neoformat";
+        config = "autocmd BufWritePre *.ts,*.tsx,*.json,*.scss,*.py,*.astro Neoformat";
       }
       {
         plugin = pkgs.vimPlugins.gitsigns-nvim;
@@ -147,6 +147,7 @@ in
         config = ''
           require'lspconfig'.nil_ls.setup{}
           require'lspconfig'.pyright.setup{}
+          require'lspconfig'.astro.setup{}
           require("lspconfig").tsserver.setup{
             settings = {
               implicitProjectConfiguration = { 
@@ -182,6 +183,7 @@ in
       nil
       nodePackages.typescript-language-server
       nodePackages.prettier
+      nodePackages."@astrojs/language-server"
       pyright
     ];
   };
