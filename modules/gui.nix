@@ -98,5 +98,18 @@
   programs.light.enable = true;
   programs.xss-lock.enable = true;
 
+  services.thermald.enable = true;
+  services.auto-cpufreq.enable = true;
+  services.auto-cpufreq.settings = {
+    battery = {
+       governor = "powersave";
+       turbo = "never";
+    };
+    charger = {
+       governor = "powersave";
+       turbo = "never";
+    };
+  };
+
   virtualisation.docker.enable = true;
 }
