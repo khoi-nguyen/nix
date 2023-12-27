@@ -98,7 +98,6 @@
   programs.light.enable = true;
   programs.xss-lock.enable = true;
 
-  services.thermald.enable = true;
   services.auto-cpufreq.enable = true;
   services.auto-cpufreq.settings = {
     battery = {
