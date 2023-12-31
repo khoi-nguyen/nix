@@ -58,7 +58,6 @@
     acceptTerms = true;
     certs = {
       "ngy.ecam.be".email = "khoi@nguyen.me.uk";
-      "nguyen.me.uk".email = "khoi@nguyen.me.uk";
     };
   };
 
