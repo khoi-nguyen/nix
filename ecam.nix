@@ -48,8 +48,8 @@
         locations."/" = {
           proxyPass = "http://127.0.0.1:3000";
         };
-        forceSSL = true;
-        enableACME = true;
+        forceSSL = false;
+        enableACME = false;
       };
     };
   };
