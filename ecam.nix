@@ -1,6 +1,12 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ./modules/common.nix
+  ];
+
+  environment.systemPackages = with pkgs; [
+    nodePackages.pm2
   ];
 
   networking = {
