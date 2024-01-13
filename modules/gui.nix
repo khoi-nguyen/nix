@@ -43,7 +43,7 @@
         settings = {
           background_opacity = "0.95";
           confirm_os_window_close = 0;
-          font_family = "Inconsolata Nerd Font Mono";
+          font_family = "FiraCode Nerd Font";
           font_size = "12.0";
         };
         keybindings = {
