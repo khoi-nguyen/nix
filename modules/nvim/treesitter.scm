@@ -1,6 +1,13 @@
 ; extends
 
 (call_expression
+ function: ((identifier) @_name
+   (#eq? @_name "mermaid"))
+ arguments: ((template_string) @injection.content
+   (#offset! @injection.content 0 1 0 -1)
+   (#set! injection.language "mermaid")))
+
+(call_expression
  function: (member_expression
    object: (identifier) @_name
      (#eq? @_name "py"))
