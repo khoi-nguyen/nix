@@ -21,6 +21,7 @@ in
 
     programs.neovim = {
       enable = true;
+      defaultEditor = true;
       extraConfig = ''
         colorscheme gruvbox-material
         let maplocalleader=","
@@ -205,5 +206,8 @@ in
     };
   };
 
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 }
