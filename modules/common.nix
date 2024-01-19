@@ -114,7 +114,6 @@ in
     fd
     gnumake42
     home-manager
-    julia
     mosh
     nodejs_20
     pandoc
