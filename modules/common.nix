@@ -121,6 +121,7 @@ in
     tmux
     typst
     unzip
+    vifm
     w3m
     xclip
     yazi
