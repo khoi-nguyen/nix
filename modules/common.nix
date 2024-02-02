@@ -114,6 +114,7 @@ in
     fd
     gnumake42
     home-manager
+    httpie
     mosh
     nodejs_20
     pandoc
