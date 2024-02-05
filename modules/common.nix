@@ -4,20 +4,6 @@
 
 { pkgs, ... }:
 
-let
-  pythonEnv = ps: with ps; [
-    antlr4-python3-runtime
-    jupyter
-    matplotlib
-    notebook
-    numpy
-    pandas
-    panflute
-    pip
-    scipy
-    sympy
-  ];
-in
 {
   imports =
     [
@@ -110,7 +96,6 @@ in
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    (python3.withPackages pythonEnv)
     fd
     gnumake42
     home-manager
@@ -118,6 +103,7 @@ in
     mosh
     nodejs_20
     pandoc
+    python3
     ripgrep
     tmux
     typst

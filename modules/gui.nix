@@ -1,5 +1,19 @@
 { pkgs, ... }:
 
+let
+  pythonEnv = ps: with ps; [
+    antlr4-python3-runtime
+    jupyter
+    matplotlib
+    notebook
+    numpy
+    pandas
+    panflute
+    pip
+    scipy
+    sympy
+  ];
+in
 {
   imports =
     [
@@ -85,6 +99,7 @@
     libreoffice
     maim
     networkmanagerapplet
+    (python3.withPackages pythonEnv)
     poppler_utils
     qutebrowser
     rofi
