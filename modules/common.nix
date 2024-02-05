@@ -124,7 +124,6 @@ in
     unzip
     vifm
     w3m
-    xclip
   ];
 
   programs.fish.enable = true;

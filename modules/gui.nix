@@ -91,10 +91,11 @@
     spotify
     teams-for-linux
     vscode
+    xclip
     xournalpp
+    yazi
     zathura
     zoom-us
-    yazi
   ];
 
   programs.light.enable = true;
