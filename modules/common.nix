@@ -125,7 +125,6 @@ in
     vifm
     w3m
     xclip
-    yazi
   ];
 
   programs.fish.enable = true;

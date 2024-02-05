@@ -94,6 +94,7 @@
     xournalpp
     zathura
     zoom-us
+    yazi
   ];
 
   programs.light.enable = true;
