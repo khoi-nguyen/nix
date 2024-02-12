@@ -39,16 +39,22 @@
       recommendedGzipSettings = true;
       virtualHosts."ngy.ecam.be" = {
         locations."/" = {
-          addHeaders."X-Frame-Options" = "ALLOW-FROM *.zebrix.net";
           proxyPass = "http://127.0.0.1:3000";
+          extraConfig =  ''
+            X-Frame-Options: Allow-From *.zebrix.net;
+            Content-Security-Policy: frame-ancestors 'self' *.zebrix.net;
+          '';
         };
         forceSSL = true;
         enableACME = true;
       };
       virtualHosts."nguyen.me.uk" = {
         locations."/" = {
-          addHeaders."X-Frame-Options" = "ALLOW-FROM *.zebrix.net";
           proxyPass = "http://127.0.0.1:3000";
+          extraConfig =  ''
+            X-Frame-Options: Allow-From *.zebrix.net;
+            Content-Security-Policy: frame-ancestors 'self' *.zebrix.net;
+          '';
         };
         forceSSL = true;
         enableACME = true;
