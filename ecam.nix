@@ -39,6 +39,7 @@
       recommendedGzipSettings = true;
       virtualHosts."ngy.ecam.be" = {
         locations."/" = {
+          addHeaders."X-Frame-Options" = "ALLOW-FROM *.zebrix.net";
           proxyPass = "http://127.0.0.1:3000";
         };
         forceSSL = true;
@@ -46,6 +47,7 @@
       };
       virtualHosts."nguyen.me.uk" = {
         locations."/" = {
+          addHeaders."X-Frame-Options" = "ALLOW-FROM *.zebrix.net";
           proxyPass = "http://127.0.0.1:3000";
         };
         forceSSL = true;
@@ -56,10 +58,7 @@
 
   security.acme = {
     acceptTerms = true;
-    certs = {
-      "ngy.ecam.be".email = "khoi@nguyen.me.uk";
-      "nguyen.me.uk".email = "khoi@nguyen.me.uk";
-    };
+    defaults.email = "khoi@nguyen.me.uk";
   };
 
   users.users.nginx.extraGroups = [ "acme" ];
