@@ -38,6 +38,7 @@ in
         set termguicolors
       '';
       plugins = with pkgs.vimPlugins; [
+        catppuccin-nvim
         emmet-vim
         fugitive
         gruvbox-material
