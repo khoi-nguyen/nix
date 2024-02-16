@@ -41,8 +41,10 @@
         locations."/" = {
           proxyPass = "http://127.0.0.1:3000";
           extraConfig =  ''
-            X-Frame-Options: Allow-From *.zebrix.net;
-            Content-Security-Policy: frame-ancestors 'self' *.zebrix.net;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+            proxy_set_header Host $host;
           '';
         };
         forceSSL = true;
