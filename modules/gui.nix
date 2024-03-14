@@ -88,7 +88,6 @@ in
 
   environment.systemPackages = with pkgs; [
     acpilight
-    arandr
     autorandr
     feh
     google-chrome
@@ -97,7 +96,9 @@ in
     kitty
     libnotify
     libreoffice
+    lxde.lxrandr
     maim
+    mpv
     networkmanagerapplet
     (python3.withPackages pythonEnv)
     poppler_utils
@@ -105,6 +106,7 @@ in
     rofi
     spotify
     teams-for-linux
+    tor-browser-bundle-bin
     vscode
     xclip
     xournalpp
