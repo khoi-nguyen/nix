@@ -102,6 +102,7 @@ in
     networkmanagerapplet
     (python3.withPackages pythonEnv)
     poppler_utils
+    postman
     qutebrowser
     rofi
     spotify
