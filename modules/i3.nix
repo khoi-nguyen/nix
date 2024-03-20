@@ -9,10 +9,15 @@ in
 
     desktopManager = {
       xterm.enable = false;
+      xfce = {
+        enable = true;
+        noDesktop =  true;
+        enableXfwm = false;
+      };
     };
 
     displayManager = {
-      defaultSession = "none+i3";
+      defaultSession = "xfce";
     };
 
     windowManager.i3 = {
@@ -113,11 +118,5 @@ in
         };
       };
     };
-    extraConfig = ''
-      exec --no-startup-id picom -b
-      exec --no-startup-id xss-lock --transfer-sleep-lock --i3lock --nofork
-      gaps inner 5
-      smart_gaps inverse_outer
-    '';
   };
 }
