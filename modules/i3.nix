@@ -9,15 +9,10 @@ in
 
     desktopManager = {
       xterm.enable = false;
-      xfce = {
-        enable = true;
-        noDesktop =  true;
-        enableXfwm = false;
-      };
     };
 
     displayManager = {
-      defaultSession = "xfce";
+      defaultSession = "none+i3";
     };
 
     windowManager.i3 = {
