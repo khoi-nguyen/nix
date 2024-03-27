@@ -98,7 +98,6 @@ in
     lxde.lxrandr
     maim
     mpv
-    networkmanagerapplet
     (python3.withPackages pythonEnv)
     poppler_utils
     postman

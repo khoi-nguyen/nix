@@ -15,14 +15,24 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.networkmanager.enable = true;
+  networking.networkmanager.enable = false;
+  networking.wireless = {
+    enable = true;
+    networks = {
+      "Proximus-Home-284317" = {
+        psk = "b5m9sfzh6cp3jswz";
+        priority = 1;
+      };
+    };
+  };
+
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_GB.UTF-8";
 
   users.groups.video = {};
   users.users.khoi = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "video" "docker" ];
+    extraGroups = [ "wheel" "video" "docker" ];
     openssh.authorizedKeys.keys = ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWJ2go62qezCgO9nXn2urHrfDgusTE65murDBUdc9MYK7ERYSH4HFd34uObUk6n3Dc+E7LNRYR4jcX3Tb3eXATsoc50rjogJ1mfdMgcI6rtEjD2ystQNkyA0iRy+yX5v3VbRM0dNolOI19lk9w59BYp6G6wEjXQZDrubGMO5U/xhCazNvLGTQV1nUw1vIke4iTKKXha3siTbf/Rsoks/6wZK1Z7wAVNpoFbSIskN9TSGdgMRq7X0yDAQNT8ZDSRMtQmAMUq3eP5vy2Spwr1N9S6f6+OQkSucGvwEHQ5NdmwvAvYx1cgBnFaYpVYlsTaOOk9Me/m/r0+olOaCnMMvN7"];
     shell = pkgs.fish;
   };
