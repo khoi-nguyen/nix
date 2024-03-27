@@ -21,7 +21,9 @@
     networks = {
       "Proximus-Home-284317" = {
         psk = "b5m9sfzh6cp3jswz";
-        priority = 1;
+      };
+      "Galaxy A14 5G 102c" = {
+        psk = "tuxieduxie";
       };
     };
   };
