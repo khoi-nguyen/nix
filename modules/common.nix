@@ -19,15 +19,11 @@
   networking.wireless = {
     enable = true;
     networks = {
-      "Proximus-Home-284317" = {
-        psk = "b5m9sfzh6cp3jswz";
       };
-      "Proximus-Home-84D8" = {
-        psk = "war96bjyab2hs";
-      };
-      "Galaxy A14 5G 102c" = {
-        psk = "tuxieduxie";
-      };
+      "Galaxy A14 5G 102c".psk = "tuxieduxie";
+      "Proximus-Home-284317".psk = "b5m9sfzh6cp3jswz";
+      "Proximus-Home-84D8".psk = "war96bjyab2hs";
+      "WiFi-2.4-025F".psk = "30250FFEF3";
     };
   };
 
