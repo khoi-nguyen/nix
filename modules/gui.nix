@@ -78,7 +78,6 @@ in
       longitude = 4.3572;
     };
     services.dunst.enable = true;
-    services.picom.enable = true;
   };
 
   fonts.packages = with pkgs; [
@@ -103,14 +102,11 @@ in
     qutebrowser
     rofi
     spotify
-    teams-for-linux
-    tor-browser-bundle-bin
     vscode
     xclip
     xournalpp
     yazi
     zathura
-    zoom-us
   ];
 
   programs.light.enable = true;
