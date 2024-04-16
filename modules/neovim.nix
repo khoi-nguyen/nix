@@ -46,6 +46,9 @@ in
         typst-vim
         vim-pandoc-syntax
         vim-pandoc
+        {
+          plugin = (fromGithub "17179d7f2a73172af5f9a8d65b01a3acf12ddd50" "master" "jxnblk/vim-mdx-js");
+        }
 
         {
           plugin = pkgs.vimPlugins.nvim-treesitter.withAllGrammars;
