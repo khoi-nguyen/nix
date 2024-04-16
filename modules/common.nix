@@ -15,16 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.networkmanager.enable = false;
-  networking.wireless = {
-    enable = true;
-    networks = {
-      "Galaxy A14 5G 102c".psk = "tuxieduxie";
-      "Proximus-Home-284317".psk = "b5m9sfzh6cp3jswz";
-      "Proximus-Home-84D8".psk = "war96bjyab2hs";
-      "WiFi-2.4-025F".psk = "30250FFEF3";
-    };
-  };
+  networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_GB.UTF-8";
