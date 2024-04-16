@@ -25,6 +25,8 @@ in
   };
 
   services.gnome.gnome-keyring.enable = true;
+  programs.dconf.enable = true;
+  security.pam.services.lightdm.enableGnomeKeyring = true;
 
   home-manager.users.khoi.xsession.windowManager.i3 = {
     enable = true;
