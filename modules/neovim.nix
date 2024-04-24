@@ -169,6 +169,7 @@ in
             require'lspconfig'.nil_ls.setup{}
             require'lspconfig'.pyright.setup{}
             require'lspconfig'.astro.setup{}
+            require'lspconfig'.svelte.setup{}
             require("lspconfig").tsserver.setup{
               settings = {
                 implicitProjectConfiguration = { 
@@ -205,6 +206,7 @@ in
         nodePackages.typescript-language-server
         nodePackages.prettier
         nodePackages."@astrojs/language-server"
+        nodePackages.svelte-language-server
         pyright
       ];
     };
