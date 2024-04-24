@@ -37,6 +37,14 @@ in
     pulse.enable = true;
   };
 
+  services.xserver = {
+    enable = true;
+    displayManager = {
+      gdm.enable = true;
+      defaultSession = "none+i3";
+    };
+  };
+
   home-manager.users.khoi = { pkgs, ... }: {
     xdg.mimeApps = {
       enable = true;
@@ -97,6 +105,7 @@ in
     lxde.lxrandr
     maim
     mpv
+    networkmanagerapplet
     (python3.withPackages pythonEnv)
     poppler_utils
     qutebrowser

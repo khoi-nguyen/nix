@@ -4,29 +4,16 @@ let
   mod = "Mod4";
 in
 {
-  services.xserver = {
+  services.xserver.windowManager.i3 = {
     enable = true;
-
-    desktopManager = {
-      xterm.enable = false;
-    };
-
-    displayManager = {
-      defaultSession = "none+i3";
-    };
-
-    windowManager.i3 = {
-      enable = true;
-      extraPackages = with pkgs; [
-        i3status
-        i3lock
-      ];
-    };
+    extraPackages = with pkgs; [
+      i3status
+      i3lock
+    ];
   };
 
   services.gnome.gnome-keyring.enable = true;
   programs.dconf.enable = true;
-  security.pam.services.lightdm.enableGnomeKeyring = true;
 
   home-manager.users.khoi.xsession.windowManager.i3 = {
     enable = true;
