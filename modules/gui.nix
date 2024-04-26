@@ -110,6 +110,7 @@ in
     qutebrowser
     rofi
     spotify
+    texlive.combined.scheme-full
     vscode
     xclip
     xournalpp
