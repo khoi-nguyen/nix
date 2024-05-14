@@ -106,6 +106,7 @@
     pandoc
     python3
     ripgrep
+    taskwarrior
     tmux
     typst
     unzip
