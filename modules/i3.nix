@@ -37,6 +37,7 @@ in
         "${mod}+t" = "exec --no-startup-id select_tmux_session";
         "${mod}+x" = "exec --no-startup-id loginctl lock-session";
         "Print" = "exec --no-startup-id maim --select | xclip -selection clipboard -t image/png";
+        "Shift+Print" = "exec --no-startup-id maim --select ~/Pictures/$(date +%s).png";
 
         # Scratchpad
         "${mod}+minus" = "scratchpad show";
