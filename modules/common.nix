@@ -106,7 +106,6 @@
     pandoc
     python3
     ripgrep
-    taskwarrior
     tmux
     typst
     unzip
@@ -118,7 +117,7 @@
 
   services.mysql = {
     enable = true;
-    package = pkgs.mysql;
+    package = pkgs.mariadb;
   };
 
   system.stateVersion = "23.05";

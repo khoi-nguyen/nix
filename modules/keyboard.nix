@@ -25,7 +25,9 @@
   # Layout
   console.keyMap = "dvorak";
   services.xserver = {
-    layout = "us";
-    xkbVariant = "dvorak-alt-intl";
+    xkb = {
+      layout = "us";
+      variant = "dvorak-alt-intl";
+    };
   };
 }

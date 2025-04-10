@@ -27,8 +27,7 @@ in
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -37,8 +36,10 @@ in
     pulse.enable = true;
   };
 
-  services.xserver = {
-    enable = true;
+  services = {
+    xserver = {
+      enable = true;
+    };
     displayManager = {
       defaultSession = "none+i3";
     };
@@ -71,7 +72,6 @@ in
           "ctrl+equal" = "increase_font_size";
           "ctrl+minus" = "decrease_font_size";
         };
-        theme = "Nord";
       };
       rofi = {
         enable = true;
@@ -86,10 +86,6 @@ in
     };
     services.dunst.enable = true;
   };
-
-  fonts.packages = with pkgs; [
-    nerdfonts
-  ];
 
   environment.systemPackages = with pkgs; [
     acpilight
