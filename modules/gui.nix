@@ -72,6 +72,7 @@ in
           "ctrl+equal" = "increase_font_size";
           "ctrl+minus" = "decrease_font_size";
         };
+        themeFile = "Nord";
       };
       rofi = {
         enable = true;
