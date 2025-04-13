@@ -13,12 +13,6 @@ let
 in
 {
   home-manager.users.khoi = {
-
-    home.file."injections.scm" = {
-      source = ./nvim/treesitter.scm;
-      target = ".config/nvim/after/queries/ecma/injections.scm";
-    };
-
     programs.neovim = {
       enable = true;
       defaultEditor = true;
@@ -171,13 +165,7 @@ in
             require'lspconfig'.astro.setup{}
             require'lspconfig'.svelte.setup{}
             require'lspconfig'.tailwindcss.setup{}
-            require("lspconfig").tsserver.setup{
-              settings = {
-                implicitProjectConfiguration = { 
-                  checkJs = true
-                },
-              }
-            }
+            require("lspconfig").ts_ls.setup{}
           '';
         }
         {
