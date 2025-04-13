@@ -96,10 +96,12 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    ferdium
     fd
     gnumake42
     home-manager
     httpie
+    lazygit
     lunarvim
     mosh
     nodejs_20
