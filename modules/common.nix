@@ -8,7 +8,6 @@
   imports =
     [
       ../hardware-configuration.nix
-      ./neovim.nix
       <home-manager/nixos>
     ];
 
@@ -53,7 +52,7 @@
         shellAbbrs = {
           g = "git";
           m = "neomutt";
-          n = "nvim";
+          n = "lvim";
           nc = "nix-collect-garbage -d && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
           nr = "sudo cp -r ~/git/nix/* /etc/nixos/ && sudo nixos-rebuild switch";
           ta = "tmux attach -t";
@@ -101,6 +100,7 @@
     gnumake42
     home-manager
     httpie
+    lunarvim
     mosh
     nodejs_20
     pandoc
