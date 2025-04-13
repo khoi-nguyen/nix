@@ -104,6 +104,7 @@
     mosh
     nodejs_20
     pandoc
+    poetry
     python3
     ripgrep
     tmux
@@ -113,12 +114,15 @@
     w3m
   ];
 
+  programs.direnv.enable = true;
   programs.fish.enable = true;
 
   services.mysql = {
     enable = true;
     package = pkgs.mariadb;
   };
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "23.05";
 }
