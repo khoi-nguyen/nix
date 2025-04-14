@@ -9,6 +9,7 @@
     [
       ../hardware-configuration.nix
       <home-manager/nixos>
+      ./nvim.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
