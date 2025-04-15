@@ -1,8 +1,10 @@
 { pkgs, lib, ... }:
 let
-  nixvim = import (builtins.fetchGit {
-    url = "https://github.com/nix-community/nixvim";
-  });
+  nixvim = import (
+    builtins.fetchGit {
+      url = "https://github.com/nix-community/nixvim";
+    }
+  );
 in
 {
   imports = [
@@ -16,7 +18,11 @@ in
 
     keymaps = [
       {
-        key = "<leader>g";
+        key = "<leader>gd";
+        action = "<cmd>Git diff<CR>";
+      }
+      {
+        key = "<leader>gg";
         action = "<cmd>LazyGit<CR>";
       }
       {
@@ -45,10 +51,14 @@ in
       conform-nvim = {
         enable = true;
         settings = {
+          formatters = {
+            nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
+          };
           formatters_by_ft = {
-            javascript = ["prettier"];
-            nix = ["nixpkgs_fmt"];
-            typescript = ["prettier"];
+            javascript = [ "prettier" ];
+            nix = [ "nixfmt" ];
+            typescript = [ "prettier" ];
+            typescriptreact = [ "prettier" ];
           };
           format_on_save = {
             lspFallback = true;
@@ -56,21 +66,26 @@ in
           };
         };
       };
+      fugitive.enable = true;
       gitsigns.enable = true;
       lazygit.enable = true;
       lint.enable = true;
       lsp = {
         enable = true;
         keymaps = {
-	        lspBuf = {
-	          gi.action = "implementation";
+          lspBuf = {
+            gi.action = "implementation";
             K.action = "hover";
+          };
+          diagnostic = {
+            gl.action = "open_float";
           };
         };
         servers = {
           nixd.enable = true;
-	        pyright.enable = true;
+          pyright.enable = true;
           ts_ls.enable = true;
+          yamlls.enable = true;
         };
       };
       lsp-format = {

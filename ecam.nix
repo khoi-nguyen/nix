@@ -18,13 +18,24 @@
       }
     ];
     defaultGateway = "172.17.0.13";
-    nameservers = ["172.17.0.200" "172.17.0.99"];
+    nameservers = [
+      "172.17.0.200"
+      "172.17.0.99"
+    ];
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 22 80 443 8022 ];
+      allowedTCPPorts = [
+        22
+        80
+        443
+        8022
+      ];
       allowedUDPPortRanges = [
-        { from = 60000; to = 61000; }
+        {
+          from = 60000;
+          to = 61000;
+        }
       ];
     };
   };
@@ -40,7 +51,7 @@
       virtualHosts."ngy.ecam.be" = {
         locations."/" = {
           proxyPass = "http://127.0.0.1:3000";
-          extraConfig =  ''
+          extraConfig = ''
             add_header Access-Control-Allow-Origin *;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
@@ -55,7 +66,7 @@
       virtualHosts."nguyen.me.uk" = {
         locations."/" = {
           proxyPass = "http://127.0.0.1:3000";
-          extraConfig =  ''
+          extraConfig = ''
             add_header Access-Control-Allow-Origin *;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
@@ -70,7 +81,7 @@
       virtualHosts."api.nguyen.me.uk" = {
         locations."/" = {
           proxyPass = "http://127.0.0.1:8000";
-          extraConfig =  ''
+          extraConfig = ''
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection "upgrade";
