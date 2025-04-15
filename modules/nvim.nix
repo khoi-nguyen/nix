@@ -11,10 +11,22 @@ in
 
   programs.nixvim = {
     enable = true;
-    colorschemes.gruvbox.enable = true;
+    colorschemes.vscode.enable = true;
     globals.mapleader = ",";
 
     keymaps = [
+      {
+        key = "<leader>g";
+        action = "<cmd>LazyGit<CR>";
+      }
+      {
+        key = "<leader>w";
+        action = "<cmd>w<CR>";
+      }
+      {
+        key = "<leader>t";
+        action = "<cmd>NvimTreeToggle<CR>";
+      }
     ];
 
     opts = {
@@ -65,6 +77,7 @@ in
         enable = true;
       };
       lualine.enable = true;
+      nvim-tree.enable = true;
       telescope = {
         enable = true;
         keymaps = {
