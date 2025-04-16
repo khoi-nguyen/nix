@@ -18,11 +18,7 @@ in
 
     keymaps = [
       {
-        key = "<leader>gd";
-        action = "<cmd>Git diff<CR>";
-      }
-      {
-        key = "<leader>gg";
+        key = "<leader>g";
         action = "<cmd>LazyGit<CR>";
       }
       {
@@ -47,7 +43,10 @@ in
 
     plugins = {
       autoclose.enable = true;
-      blink-cmp.enable = true;
+      blink-cmp = {
+        enable = true;
+        settings.keymap.preset = "super-tab";
+      };
       conform-nvim = {
         enable = true;
         settings = {
