@@ -92,6 +92,7 @@ in
 
   environment.systemPackages = with pkgs; [
     acpilight
+    alsa-utils
     autorandr
     feh
     google-chrome

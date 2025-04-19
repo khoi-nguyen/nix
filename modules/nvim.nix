@@ -83,6 +83,7 @@ in
         servers = {
           nixd.enable = true;
           pyright.enable = true;
+          tailwindcss.enable = true;
           ts_ls.enable = true;
           yamlls.enable = true;
         };
@@ -91,6 +92,7 @@ in
         enable = true;
       };
       lualine.enable = true;
+      numbertoggle.enable = true;
       nvim-tree.enable = true;
       telescope = {
         enable = true;
