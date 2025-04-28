@@ -34,6 +34,7 @@ in
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
 
   services = {
@@ -105,6 +106,7 @@ in
     maim
     mpv
     networkmanagerapplet
+    pavucontrol
     (python3.withPackages pythonEnv)
     poppler_utils
     qutebrowser
