@@ -14,11 +14,16 @@ in
   programs.nixvim = {
     enable = true;
     colorschemes.vscode.enable = true;
+    colorschemes.catppuccin.enable = true;
     globals.mapleader = ",";
 
     keymaps = [
       {
         key = "<leader>g";
+        action = "<cmd>Git<CR>";
+      }
+      {
+        key = "<leader>lg";
         action = "<cmd>LazyGit<CR>";
       }
       {
