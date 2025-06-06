@@ -5,4 +5,6 @@
   ];
 
   networking.hostName = "tuxie";
+
+  services.udisks2.enable = true;
 }

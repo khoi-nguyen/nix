@@ -89,6 +89,7 @@ in
         longitude = 4.3572;
       };
       services.dunst.enable = true;
+      services.udiskie.enable = true;
     };
 
   environment.systemPackages = with pkgs; [
