@@ -23,8 +23,9 @@
   users.users.khoi = {
     isNormalUser = true;
     extraGroups = [
-      "wheel"
+      "scanner"
       "video"
+      "wheel"
     ];
     openssh.authorizedKeys.keys = [
       "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWJ2go62qezCgO9nXn2urHrfDgusTE65murDBUdc9MYK7ERYSH4HFd34uObUk6n3Dc+E7LNRYR4jcX3Tb3eXATsoc50rjogJ1mfdMgcI6rtEjD2ystQNkyA0iRy+yX5v3VbRM0dNolOI19lk9w59BYp6G6wEjXQZDrubGMO5U/xhCazNvLGTQV1nUw1vIke4iTKKXha3siTbf/Rsoks/6wZK1Z7wAVNpoFbSIskN9TSGdgMRq7X0yDAQNT8ZDSRMtQmAMUq3eP5vy2Spwr1N9S6f6+OQkSucGvwEHQ5NdmwvAvYx1cgBnFaYpVYlsTaOOk9Me/m/r0+olOaCnMMvN7"

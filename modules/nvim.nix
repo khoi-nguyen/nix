@@ -93,9 +93,6 @@ in
           yamlls.enable = true;
         };
       };
-      lsp-format = {
-        enable = true;
-      };
       lualine.enable = true;
       numbertoggle.enable = true;
       nvim-tree.enable = true;

@@ -21,7 +21,26 @@ in
     ./i3.nix
   ];
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.brlaser ];
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  hardware.sane = {
+    enable = true;
+    brscan4.enable = true;
+    brscan5.enable = true;
+    extraBackends = [
+      pkgs.sane-airscan
+      pkgs.sane-backends
+    ];
+  };
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
@@ -97,6 +116,7 @@ in
     alsa-utils
     autorandr
     feh
+    firefox
     google-chrome
     inotify-tools
     killall
@@ -108,10 +128,11 @@ in
     mpv
     networkmanagerapplet
     pavucontrol
+    peek
     (python3.withPackages pythonEnv)
     poppler_utils
-    qutebrowser
     rofi
+    simple-scan
     spotify
     texlive.combined.scheme-full
     vscode
