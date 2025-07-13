@@ -135,6 +135,7 @@ in
     simple-scan
     spotify
     texlive.combined.scheme-full
+    transmission_4-qt
     vscode
     xclip
     xournalpp
