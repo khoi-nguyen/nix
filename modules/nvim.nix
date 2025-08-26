@@ -61,6 +61,7 @@ in
           formatters_by_ft = {
             javascript = [ "prettier" ];
             nix = [ "nixfmt" ];
+            python = [ "black" ];
             typescript = [ "prettier" ];
             typescriptreact = [ "prettier" ];
           };
