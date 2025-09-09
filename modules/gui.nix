@@ -123,7 +123,7 @@ in
     kitty
     libnotify
     libreoffice
-    lxde.lxrandr
+    lxrandr
     maim
     mpv
     networkmanagerapplet
