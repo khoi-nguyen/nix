@@ -138,6 +138,7 @@ in
     transmission_4-qt
     vscode
     xclip
+    xinput_calibrator
     xournalpp
     yazi
     zathura
