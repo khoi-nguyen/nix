@@ -19,6 +19,7 @@ in
   imports = [
     ./keyboard.nix
     ./i3.nix
+    ./hyprland.nix
   ];
 
   services.printing = {
@@ -61,6 +62,7 @@ in
       enable = true;
     };
     displayManager = {
+      gdm.enable = true;
       defaultSession = "none+i3";
     };
   };
