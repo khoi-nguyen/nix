@@ -33,6 +33,11 @@
     shell = pkgs.fish;
   };
 
+  fonts.packages = with pkgs; [
+    font-awesome
+    material-design-icons
+  ];
+
   home-manager.useGlobalPkgs = true;
   home-manager.users.khoi =
     { pkgs, ... }:
