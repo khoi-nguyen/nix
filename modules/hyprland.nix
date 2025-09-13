@@ -33,7 +33,9 @@ in
           "$mod, D, killactive"
           "$mod SHIFT, Q, exit"
           "$mod, F, fullscreen"
-          "$mod, R, exec, wofi --show drun"
+          "$mod, P, exec, xopen"
+          "$mod, R, exec, rofi -show drun"
+          "$mod, T, exec, select_tmux_session"
           "$mod, h, movefocus, l"
           "$mod, j, movefocus, d"
           "$mod, k, movefocus, u"
@@ -42,8 +44,7 @@ in
           "$mod SHIFT, j, movewindow, d"
           "$mod SHIFT, k, movewindow, u"
           "$mod SHIFT, l, movewindow, r"
-          "$mod, m, movecurrentworkspacetomonitor, r"
-          "$mod SHIFT, m, movecurrentworkspacetomonitor, l"
+          "$mod, m, movecurrentworkspacetomonitor, +1"
           "$mod, bracketright, workspace, e+1"
           "$mod, bracketleft, workspace, e-1"
         ]
@@ -57,8 +58,17 @@ in
           "$mod, 0, workspace, 10"
           "$mod SHIFT, 0, movetoworkspace, 10"
         ];
+        bindel = [
+          ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+          ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+          ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+          ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+          ",XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
+          ",XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
+        ];
         monitor = [
           "eDP-1, preferred, 0x0, 1"
+          "desc:Samsung Electric Company LU28R55 HNMX300129, 2560x1440, auto-left, 1"
           ", preferred, auto-left, 1"
         ];
         general = {
@@ -67,6 +77,7 @@ in
           "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
           "col.inactive_border" = "rgba(595959aa)";
         };
+        animations.enabled = false;
         decoration = {
           rounding = 10;
         };
@@ -207,6 +218,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    brightnessctl
     wofi
   ];
 }

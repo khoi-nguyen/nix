@@ -6,7 +6,7 @@ if test $session_count -eq 0
   exit 1
 end
 
-set session "$(tmux list-sessions | awk -F ":" '{print $1}' | rofi -dmenu -i)"
+set session "$(tmux list-sessions | awk -F ":" '{print $1}' | wofi --dmenu --insensitive)"
 if test $status -eq 0
   kitty tmux attach -t $session
 end

@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 cd ~
-set file "$(fd --no-ignore .pdf | rofi -dmenu -i)"
+set file "$(fd --no-ignore .pdf | wofi --dmenu --insensitive)"
 
 if test $status -eq 0
   xdg-open "$file" &
