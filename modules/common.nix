@@ -71,6 +71,7 @@
             n = "lvim";
             nc = "nix-collect-garbage -d && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
             nr = "sudo cp -r ~/git/nix/* /etc/nixos/ && sudo nixos-rebuild switch";
+            p = "wl-paste -t image/png >";
             ta = "tmux attach -t";
             tn = "tmux new -s";
           };

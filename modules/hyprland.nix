@@ -47,6 +47,7 @@ in
           "$mod, m, movecurrentworkspacetomonitor, +1"
           "$mod, bracketright, workspace, e+1"
           "$mod, bracketleft, workspace, e-1"
+          ", Print, exec, grim -g \"$(slurp -d)\" - | wl-copy"
         ]
         ++ (builtins.concatLists (
           builtins.genList (i: [
@@ -219,6 +220,9 @@ in
 
   environment.systemPackages = with pkgs; [
     brightnessctl
+    grim
+    slurp
+    wl-clipboard
     wofi
   ];
 }
