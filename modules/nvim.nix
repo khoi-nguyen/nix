@@ -64,6 +64,7 @@ in
             python = [ "black" ];
             typescript = [ "prettier" ];
             typescriptreact = [ "prettier" ];
+            yaml = [ "prettier" ];
           };
           format_on_save = {
             lspFallback = true;
