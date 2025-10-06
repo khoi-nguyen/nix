@@ -23,6 +23,7 @@
   users.users.khoi = {
     isNormalUser = true;
     extraGroups = [
+      "docker"
       "scanner"
       "video"
       "wheel"
@@ -116,6 +117,7 @@
     ferdium
     fd
     gnumake42
+    hey
     home-manager
     httpie
     lazygit
@@ -140,11 +142,23 @@
     enable = true;
     package = pkgs.mariadb;
   };
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ];
+
+  virtualisation.docker = {
+    enable = true;
+    daemon.settings = {
+      "bip" = "192.168.245.1/24";
+      "default-address-pools" = [
+        {
+          "base" = "192.168.240.0/20";
+          "size" = 24;
+        }
+      ];
+    };
+  };
 
   system.stateVersion = "23.05";
 }
