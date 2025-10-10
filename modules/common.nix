@@ -52,6 +52,9 @@
           paths = [ ../scripts ];
         })
       ];
+      home.sessionVariables = {
+        EDITOR = "nvim";
+      };
 
       programs = {
         fish = {
@@ -67,6 +70,7 @@
             }
           ];
           shellAbbrs = {
+            dc = "docker compose";
             g = "git";
             m = "neomutt";
             n = "lvim";
@@ -81,7 +85,10 @@
           enable = true;
           userName = "Khoi Nguyen";
           userEmail = "khoi@nguyen.me.uk";
-          extraConfig.pull.rebase = false;
+          extraConfig = {
+            core.editor = "nvim";
+            pull.rebase = false;
+          };
         };
         home-manager.enable = true;
         tmux = {
